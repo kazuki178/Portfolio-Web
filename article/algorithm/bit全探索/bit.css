@@ -7,9 +7,6 @@
 body {
   font-family: "Noto Sans JP", sans-serif;
 }
-body p {
-  line-height: 29px;
-}
 
 /* ローディング */
 .loading {
@@ -57,7 +54,8 @@ body p {
   border-radius: 50%;
   width: 190px;
   height: 190px;
-  margin: 0 auto 0 auto;
+  margin: 0px auto 0 auto;
+  opacity: 0;
   z-index: 100;
 }
 #container .card {
@@ -79,89 +77,59 @@ body p {
   font-size: 17px;
   letter-spacing: 4px;
 }
-#container .card .name > h1 {
+#container .card .name > h2 {
   font-family: "Lora", serif;
   margin-top: 9px;
-}
-#container .card .name:nth-of-type(2) {
-  margin-top: 60px;
-  top: 8px;
-}
-#container .card .name > .job-name {
-  position: absolute;
-  top: 10.5%;
-  left: 45%;
-  transform: translate(-70%, -90%);
-  font-size: 17px;
-  letter-spacing: 4px;
-  font-weight: bold;
-  font-family: "Lora", serif;
-}
-#container .card .name > .job-name > .initial-color {
-  color: rgba(38, 150, 195, 0.7490196078);
-}
-#container .card > .about {
-  margin: 300px 0 0 auto;
-  text-align: center;
-  font-size: 20px;
-}
-#container .card > .about-text {
-  width: 70%;
-  margin: 35px auto 0 auto;
-}
-#container .card > .license {
-  margin-top: 80px;
-  text-align: center;
-}
-#container .card > .license > p {
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-#container .card > .main-tech {
-  margin: 100px 0 60px auto;
-  text-align: center;
-  font-size: 20px;
-}
-#container .card > .tech-card {
-  display: flex;
-  margin: 0 40px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-#container .card > .tech-card img {
-  width: 50px;
-  margin: 0px 30px 70px 30px;
 }
 #container .card .about-me {
   background-color: skyblue;
   padding: 7px;
-  width: 100px;
-  text-align: center;
-  margin: 60px auto 100px auto;
   border-radius: 7%;
+  position: absolute;
+  top: 440px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 17px;
   letter-spacing: 2px;
   font-family: "Lora", serif;
   transition: transform 0.5s;
 }
 #container .card .about-me:hover {
-  transform: scale(1.14);
+  transform: translate(-50%, -50%) scale(1.14);
   border-radius: 10px;
 }
 #container .card .about-me > a {
   color: white;
   text-decoration: none;
 }
-
-@media screen and (max-width: 1000px) {
-  #container .top {
-    width: 150px;
-    height: 150px;
-  }
+#container .main-text {
+  margin: 300px auto 0 auto;
+  text-align: center;
+  width: 70%;
 }
+#container .main-text h2 {
+  font-family: "Lora", serif;
+  margin-top: 70px;
+}
+#container .main-text p {
+  margin-top: 30px;
+  line-height: 29px;
+}
+#container .main-text img {
+  margin-top: 20px;
+  width: 30%;
+  min-width: 390px;
+}
+#container .main-text iframe {
+  margin-top: 20px;
+}
+#container .main-text .order {
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 600px) {
-  #container .top {
-    width: 120px;
-    height: 120px;
+  #container .main-text img {
+    width: 20%;
+    min-width: 290px; /* 390pxではなく290pxに修正 */
   }
-}/*# sourceMappingURL=about.css.map */
+}/*# sourceMappingURL=bit.css.map */

@@ -1,4 +1,4 @@
-@use "mixin" as *;
+@use "../mixin" as *;
 
 * {
     margin: 0;
@@ -157,18 +157,17 @@ body {
         & .about-me {
             background-color: skyblue;
             padding: 7px;
+            width: 100px;
+            text-align: center;
+            margin: 120px auto 100px auto;
             border-radius: 7%;
-            position: absolute;
-            top: 440px;
-            left: 50%;
-            transform: translate(-50%, -50%);
             font-size: 17px;
             letter-spacing: 2px;
             font-family: 'Lora', serif;
-            transition: transform 0.5s;
+            transition: transform 0.5s ;
 
             &:hover {
-                transform: translate(-50%, -50%)scale(1.14);
+                transform:scale(1.14);
                 border-radius: 10px;
             }
 
@@ -260,20 +259,5 @@ body {
             }
         }
 
-    }
-}
-
-
-@media screen and (max-width: 1000px) {
-    #container  .top{
-        width: 150px;
-        height: 150px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    #container  .top{
-        width: 120px;
-        height: 120px;
     }
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- ↓ job-name font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="loading">
+        <span class="circle"></span>
+    </div>
+    <script>
+        const loading = document.querySelector('.loading');
+
+        window.addEventListener('load', () => {
+            loading.classList.add('hide');
+        }, false);
+
+    </script>
+
+
+    <div id="container">
+        <img class="top" src="img/index_me2.jpg" alt="">
+
+        <div class="card">
+
+            <div class="name">
+                <h2>bit全探索について理解しよう</h2>
+
+            </div>
+
+
+            <div class="main-text">
+                <h2>概要</h2>
+                <p>2^N通りあるN 個のものから、いくつか選んだ組合せを全探索するアルゴリズム</p>
+                <h2>bit全探索について</h2>
+                <p>上記の通り、2^N通りあるN 個のものから、いくつか選んだ組合せを全探索するアルゴリズムです。
+                    簡単な考え方を下記に記載します。</p>
+                <h2>具体例</h2>
+                <p>整数1,2,3が与えられる場合、その中からいくつかを選ぶ方法を列挙する場合は8通りあると考えられます。</p>
+                <img src="../bit全探索/bit_img/select.png" alt="">
+                <p>ここでなぜ8通りなのか考えてみます。各数字3,2,1についてそれぞれが選ぶ・選ばないの選択肢を持っています。
+                    つまり各々の整数に対して2つの選択肢があることから、今回の3つの整数の選択肢は2^3通り(選ぶ・選ばないの2つの選択肢を持つ要素が3つあるため)であると考えられます。
+                    n個のものから、いくつか選んだ組み合わせを探すなら、全探索でよいのではないかと考える方がいるかもしれませんが、そうした場合はn重のfor文が必要になり、コードが大変なことになります。</p>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%280%2C0%2C0%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=int%2520main%28%29%2520%257B%250A%2520%2520%2520%2520for%2520%28int%2520i%2520%253D%25200%253B%2520i%2520%253C%2520n%253B%2520i%252B%252B%29%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520for%2520%28int%2520j%2520%253D%25200%253B%2520j%2520%253C%2520n%253B%2520j%252B%252B%29%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520for%2520%28int%2520k%2520%253D0%253B%2520k%2520%253C%2520n%253B%2520k%252B%252B%29%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520for%28int%2520l%2520%253D%25200%253B%2520l%2520%253C%2520n%253B%2520l%252B%252B%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520for%28int%2520m%2520%253D%25200%253B%2520m%2520%253C%2520n%253B%2520m%252B%252B%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%252F%252F%2520n%25E5%259B%259E%25E3%2581%25AEfor%25E3%2581%258C%25E7%25B6%259A%25E3%2581%258F....%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520"
+                    style="width: 100%; height: 316px; border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe><br>
+                <p>これらをbit全探索で実装すると少ないコードで完結することができるようになります。それではbit全探索の実装をしていきます。</p>
+                <h2>手順</h2>
+                <p class="order">1,&nbsp;for文の条件を記述するために、いくつか選ぶ方法を2進数で表し、for文の条件式で2進数を10進数に戻し条件を記述する。</p>
+                <p class="order">2,&nbsp;if文で10進数から2進数に変換し、各桁に1が立っているか判定して処理を実行する。</p>
+                <h2>実装</h2>
+                <p>まず手順1の、いくつか選ぶ方法を2進数で表します。つまり選んだ場合は"1"、選ばない場合を"0"として2進数を10進数に変換します。</p>
+                <img src="../bit全探索/bit_img/nisin2.png" alt="">
+                <p>そして、その2進数を10進数に変換します。</p>
+                <img src="../bit全探索/bit_img/jyuu.png" alt="">
+                <p>この時に全てを選んだ時の2進数"111"の10進数が7になっていることに注目します。0~7の8個、つまり0から2^3-1の範囲をforの条件式に指定することができるようになります。
+                    そうすることで全てのパターンを列挙できます。
+                    forの条件式をc++で記述していきます。</p>
+                <!-- <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%280%2C0%2C0%2C1%29&t=seti&wt=none&l=auto&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=int%2520main%28%29%2520%257B%250A%2520%2520%2520%2520for%28int%2520bit%2520%253D%25200%253B%2520bit%2520%253C%2520%281%2520%253C%253C%25203%29%253B%2520bit%252B%252B%29%2520%257B%250A%2520%2520%2520%2520%2520%2520%2520%2520%252F%252F%2520code%250A%2520%2520%2520%2520%257D%250A%257D"
+                    style="width: 446px; height: 167px; border:0; transform: scale(1); overflow:hidden;"
+                    sandbox="allow-scripts allow-same-origin">
+                </iframe> -->
+
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
