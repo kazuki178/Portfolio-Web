@@ -18,6 +18,19 @@
 </head>
 
 <body>
+    <div class="loading">
+        <span class="circle"></span>
+    </div>
+    <script>
+        const loading = document.querySelector('.loading');
+
+        window.addEventListener('load', () => {
+            loading.classList.add('hide');
+        }, false);
+
+    </script>
+
+    
     <div id="container">
         <img class="top" src="img/index_me2.jpg" alt="">
 
@@ -83,6 +96,7 @@
                     <tr><td class="News-row">【2023/12/19】&nbsp;<span class="News-text">webサイトを一新しました。</span></td></tr>
                 </table>
             </div>
+
         </div>
     </div>
 </body>
