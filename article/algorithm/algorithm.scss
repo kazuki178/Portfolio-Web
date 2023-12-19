@@ -234,33 +234,6 @@ body {
             }
         }
 
-        &>.News-tables {
-            margin: 90px auto 50px auto;
-            padding-bottom: 30px;
-            width: 80%;
-            max-width: 900px;
-
-
-            & table {
-                margin: 0 auto;
-                & .News-top {
-                    color: rgb(0, 0, 0);
-                    font-family: 'Lora', serif;
-                    font-size: 23px;
-                    margin-bottom: 30px;
-                }
-
-                & td {
-                    padding-top: 20px;
-                    border-bottom: solid skyblue;
-                    text-align: left;
-                    & .News-text {
-                        text-align: center;
-                        display: block;
-                    }
-                }
-            }
-        }
 
     }
 }

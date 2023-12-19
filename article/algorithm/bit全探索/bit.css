@@ -65,8 +65,8 @@ body {
   position: absolute;
   top: 50%;
   left: 0;
-  border-top-right-radius: 8%;
-  border-top-left-radius: 8%;
+  border-top-right-radius: 80px;
+  border-top-left-radius: 80px;
   z-index: 0;
 }
 #container .card .name {
@@ -84,18 +84,17 @@ body {
 #container .card .about-me {
   background-color: skyblue;
   padding: 7px;
+  width: 100px;
+  text-align: center;
+  margin: 60px auto 100px auto;
   border-radius: 7%;
-  position: absolute;
-  top: 440px;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 17px;
   letter-spacing: 2px;
   font-family: "Lora", serif;
   transition: transform 0.5s;
 }
 #container .card .about-me:hover {
-  transform: translate(-50%, -50%) scale(1.14);
+  transform: scale(1.14);
   border-radius: 10px;
 }
 #container .card .about-me > a {
