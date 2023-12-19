@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+body p {
+  line-height: 29px;
+}
+
+#container {
+  position: relative;
+}
+#container .top {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
+  margin: 80px auto 0 auto;
+  z-index: 100;
+}
+#container .card {
+  background-color: rgba(192, 192, 192, 0.176);
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-top-right-radius: 8%;
+  border-top-left-radius: 8%;
+  z-index: 0;
+}
+#container .card .name {
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  letter-spacing: 4px;
+}
+#container .card .name > h1 {
+  font-family: "Lora", serif;
+}
+#container .card .name:nth-of-type(2) {
+  margin-top: 60px;
+  top: 8px;
+}
+#container .card .name > .job-name {
+  position: absolute;
+  top: 10.5%;
+  left: 45%;
+  transform: translate(-70%, -90%);
+  font-size: 17px;
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-family: "Lora", serif;
+}
+#container .card .name > .job-name > .initial-color {
+  color: rgba(38, 150, 195, 0.7490196078);
+}
+#container .card > .about {
+  margin: 300px 0 0 auto;
+  text-align: center;
+  font-size: 20px;
+}
+#container .card > .about-text {
+  width: 70%;
+  margin: 35px auto 0 auto;
+}
+#container .card > .license {
+  margin-top: 80px;
+  text-align: center;
+}
+#container .card > .license > p {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+#container .card > .main-tech {
+  margin: 100px 0 60px auto;
+  text-align: center;
+  font-size: 20px;
+}
+#container .card > .tech-card {
+  display: flex;
+  margin: 0 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#container .card > .tech-card img {
+  width: 50px;
+  margin: 0px 30px 70px 30px;
+}
+#container .card .about-me {
+  background-color: skyblue;
+  padding: 7px;
+  width: 100px;
+  text-align: center;
+  margin: 60px auto 100px auto;
+  border-radius: 7%;
+  font-size: 17px;
+  letter-spacing: 2px;
+  font-family: "Lora", serif;
+  transition: transform 0.5s;
+}
+#container .card .about-me:hover {
+  transform: scale(1.14);
+  border-radius: 10px;
+}
+#container .card .about-me > a {
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=about.css.map */

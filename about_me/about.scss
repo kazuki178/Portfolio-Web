@@ -1,0 +1,148 @@
+@use "../mixin" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+
+    & p {
+        line-height: 29px;
+    }
+}
+
+// * {
+//     outline: 2px solid blue;
+//   }
+
+
+
+
+#container {
+    position: relative;
+
+    & .top {
+        position: relative;
+        display: block;
+        border-radius: 50%;
+        width: 190px;
+        height: 190px;
+        margin: 80px auto 0 auto;
+        z-index: 100;
+    }
+
+
+
+    & .card {
+        background-color: rgba(192, 192, 192, 0.176);
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        border-top-right-radius: 8%;
+        border-top-left-radius: 8%;
+        z-index: 0;
+
+        & .name {
+            position: absolute;
+            top: 170px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 17px;
+            letter-spacing: 4px;
+
+            &>h1 {
+                font-family: 'Lora', serif;
+            }
+
+            &:nth-of-type(2) {
+                margin-top: 60px;
+                top: 8px;
+            }
+
+            &>.job-name {
+                position: absolute;
+                top: 10.5%;
+                left: 45%;
+                transform: translate(-70%, -90%);
+                font-size: 17px;
+                letter-spacing: 4px;
+                font-weight: bold;
+                font-family: 'Lora', serif;
+
+                &>.initial-color {
+                    color: #2696c3bf;
+                }
+            }
+
+        }
+
+        &>.about {
+            margin: 300px 0 0 auto;
+            text-align: center;
+            font-size: 20px;
+
+        }
+
+        &>.about-text {
+            width: 70%;
+            margin: 35px auto 0 auto;
+        }
+
+        &>.license {
+            margin-top: 80px;
+            text-align: center;
+
+            &>p {
+                margin-bottom: 10px;
+                font-size: 20px;
+            }
+        }
+
+        &>.main-tech {
+            margin: 100px 0 60px auto;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        &>.tech-card {
+            display: flex;
+            margin: 0 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            & img {
+                width: 50px;
+                margin: 0px 30px 70px 30px;
+                
+            }
+        }
+
+
+        & .about-me {
+            background-color: skyblue;
+            padding: 7px;
+            width: 100px;
+            text-align: center;
+            margin: 60px auto 100px auto;
+            border-radius: 7%;
+            font-size: 17px;
+            letter-spacing: 2px;
+            font-family: 'Lora', serif;
+            transition: transform 0.5s ;
+
+            &:hover {
+                transform:scale(1.14);
+                border-radius: 10px;
+            }
+
+            &>a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
