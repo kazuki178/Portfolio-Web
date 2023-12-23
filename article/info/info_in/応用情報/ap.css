@@ -104,7 +104,8 @@ body {
 #container .main-text {
   margin: 300px auto 0 auto;
   text-align: center;
-  width: 70%;
+  width: 80%;
+  max-width: 800px;
 }
 #container .main-text h2 {
   font-family: "Lora", serif;
