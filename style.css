@@ -129,16 +129,18 @@ body {
 }
 #container .card .about-me {
   background-color: skyblue;
-  padding: 5px;
+  padding: 3px;
   border-radius: 7%;
   position: absolute;
   top: 440px;
   left: 50%;
+  width: 100px;
   transform: translate(-50%, -50%);
   font-size: 17px;
   letter-spacing: 2px;
   font-family: "Lora", serif;
-  transition: transform 0.5s;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
 }
 #container .card .about-me:hover {
   transform: translate(-50%, -50%) scale(1.14);
@@ -147,6 +149,7 @@ body {
 #container .card .about-me > a {
   color: white;
   text-decoration: none;
+  display: block;
 }
 #container .card > .mian-contents {
   display: flex;
@@ -183,7 +186,7 @@ body {
   font-size: 17px;
   letter-spacing: 2px;
   font-family: "Lora", serif;
-  transition: transform 0.5s;
+  transition: transform 0.5s ease-in-out;
 }
 #container .card > .mian-contents .selector .selector-btn:hover {
   transform: scale(1.14);
