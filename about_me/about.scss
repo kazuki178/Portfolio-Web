@@ -128,7 +128,9 @@ body {
         }
 
         &>.about-text {
-            width: 70%;
+
+            width: 80%;
+            max-width: 800px;
             margin: 35px auto 0 auto;
         }
 
