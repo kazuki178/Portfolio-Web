@@ -62,6 +62,7 @@ body {
   background-color: rgba(192, 192, 192, 0.176);
   width: 100%;
   height: auto;
+  min-height: 100vh;
   position: absolute;
   top: 65%;
   left: 0;
@@ -133,4 +134,4 @@ body {
     width: 20%;
     min-width: 310px; /* 390pxではなく290pxに修正 */
   }
-}/*# sourceMappingURL=bit.css.map */
+}/*# sourceMappingURL=style.css.map */

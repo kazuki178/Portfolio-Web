@@ -1,4 +1,4 @@
-@use "../../../../mixin" as *;
+@use "../../../mixin" as *;
 
 * {
     margin: 0;
@@ -74,6 +74,7 @@ body {
         background-color: rgba(192, 192, 192, 0.176);
         width: 100%;
         height: auto;
+        min-height: 100vh; 
         position: absolute;
         top: 65%;
         left: 0;
@@ -132,6 +133,7 @@ body {
         text-align: center;
         width: 80%;
         max-width: 800px;
+
         & h2 {
             font-family: 'Lora', serif;
             margin-top: 70px;
