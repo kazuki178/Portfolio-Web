@@ -118,7 +118,7 @@ body {
 }
 #container .main-text img {
   margin-top: 20px;
-  width: 30%;
+  width: 500px;
   min-width: 390px;
 }
 #container .main-text iframe {
@@ -133,4 +133,4 @@ body {
     width: 20%;
     min-width: 310px; /* 390pxではなく290pxに修正 */
   }
-}/*# sourceMappingURL=ap.css.map */
+}/*# sourceMappingURL=paket.css.map */

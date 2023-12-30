@@ -58,6 +58,7 @@ body {
 #container {
     position: relative;
     padding-top: 80px;
+
     & .top {
         position: relative;
         display: block;
@@ -131,6 +132,7 @@ body {
         text-align: center;
         width: 80%;
         max-width: 800px;
+
         & h2 {
             font-family: 'Lora', serif;
             margin-top: 70px;
@@ -143,7 +145,7 @@ body {
 
         & img {
             margin-top: 20px;
-            width: 30%;
+            width: 500px;
             min-width: 390px;
         }
 

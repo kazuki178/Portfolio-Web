@@ -105,7 +105,8 @@ body {
 #container .main-text {
   margin: 300px auto 0 auto;
   text-align: center;
-  width: 70%;
+  width: 80%;
+  max-width: 800px;
 }
 #container .main-text h2 {
   font-family: "Lora", serif;
@@ -117,7 +118,7 @@ body {
 }
 #container .main-text img {
   margin-top: 20px;
-  width: 30%;
+  width: 500px;
   min-width: 390px;
 }
 #container .main-text iframe {
@@ -130,6 +131,6 @@ body {
 @media screen and (max-width: 600px) {
   #container .main-text img {
     width: 20%;
-    min-width: 290px; /* 390pxではなく290pxに修正 */
+    min-width: 310px; /* 390pxではなく290pxに修正 */
   }
 }/*# sourceMappingURL=bit.css.map */
