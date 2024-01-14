@@ -140,12 +140,14 @@ body {
   font-size: 17px;
   letter-spacing: 2px;
   font-family: "Lora", serif;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
   text-align: center;
+  text-decoration: none;
+  color: white;
 }
 #container .card .about-me:hover {
   transform: translate(-50%, -50%) scale(1.14);
-  border-radius: 10px;
+  border-radius: 20px;
 }
 #container .card .about-me > a {
   color: white;
@@ -187,16 +189,14 @@ body {
   font-size: 17px;
   letter-spacing: 2px;
   font-family: "Lora", serif;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  text-decoration: none;
+  color: white;
+  display: block;
 }
 #container .card > .mian-contents .selector .selector-btn:hover {
   transform: scale(1.14);
   border-radius: 10px;
-}
-#container .card > .mian-contents .selector .selector-btn > a {
-  color: white;
-  text-decoration: none;
-  display: block;
 }
 #container .card > .News-tables {
   margin: 90px auto 50px auto;
