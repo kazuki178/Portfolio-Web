@@ -65,8 +65,8 @@ body {
   position: absolute;
   top: 65%;
   left: 0;
-  border-top-right-radius: 8%;
-  border-top-left-radius: 8%;
+  border-top-right-radius: 80px;
+  border-top-left-radius: 80px;
   z-index: 0;
 }
 #container .card .name {
@@ -197,4 +197,17 @@ body {
 #container .card > .mian-contents .selector .selector-btn:hover {
   transform: scale(1.14);
   border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  #container .top {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #container .top {
+    width: 120px;
+    height: 120px;
+  }
 }/*# sourceMappingURL=tec.css.map */
