@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPパケット通信について デフォルトルート ルーティングテーブル ARPテーブル TCP/IP || 矢橋和樹</title>
+    <link rel="stylesheet" href="../../defaultCSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- ↓ job-name font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="loading">
+        <span class="circle"></span>
+    </div>
+    <script>
+        const loading = document.querySelector('.loading');
+
+        window.addEventListener('load', () => {
+            loading.classList.add('hide');
+        }, false);
+
+    </script>
+
+
+    <div id="container">
+        <img class="top" src="img/index_me2.jpg" alt="">
+
+        <div class="card">
+
+            <div class="name">
+
+                <h1 style="font-size: 25px;">認証局の階層構造について理解しよう</h1>
+
+            </div>
+
+
+            <div class="main-text">
+                <p>認証局は階層構造になっており、下位の認証局は上位の認証局に証明書を発行してもらっている。</p>
+                <h2>前提知識</h2>
+                <p>そもそも認証局って？ => 認証局は電子文書のやり取りで重要な役割を果たす電子署名の信頼性を高めるための認証を行っている第三者機関であり、
+                    具体的な役割は本人確認と電子証明書の発行と電子証明書の失効などが挙げられる。
+                </p>
+
+                <p id="publicCertificateAuthority">認証局には「パブリック認証局」と「プライベート認証局」の2種類があります。パブリック認証局は社内に閉じられた範囲ではなく、
+                    広い範囲で公に対して証明を行うことのできる認証曲で、監査法人による審査の上、規格に合格した信頼性の高い機関です。一方でプライベート認証局は、社内等閉じられた範囲で、
+                    企業ポリシーに基づき運用される前提のものになります。</p>
+                    <p>また最上位のルート認証局の配下の認証局を中間認証局といいます。</p>
+
+                <p><a href="https://hrnote.jp/contents/roumu-denshikkeiyaku-ninsyokyoku/"
+                        target="_blank">階層構造の前に、認証局の役割等はこちらを参照してください。</a></p>
+                <img src="../認証局の階層構造/認証局img/認証局1.png" alt="" style="margin-top: 80px;">
+                <p>上記画像のようにサーバはクライアントにサーバ証明書を送付します。この時に送られてきたサーバ証明書は認証局Dによって認証されています。つまり認証局Dの秘密鍵で暗号化されており、認証局Dの公開鍵で検証する必要があります。
+                    クライアントは検証を行うために、認証局Dの公開鍵を取得するため認証局Dの公開鍵証明書を取得します。
+                </p>
+
+
+
+                <img src="../認証局の階層構造/認証局img/認証局2.png" alt="" style="margin-top: 80px;">
+                <p>認証局Dの公開鍵証明書は認証局Cによって認証されています。つまり認証局Cの秘密鍵で暗号化されているため認証局Cの公開鍵が必要です。認証局Cの公開鍵を取得するためには認証局Cの公開鍵証明書を取得する必要があります。
+                </p>
+
+
+
+                <img src="../認証局の階層構造/認証局img/認証局3.png" alt="" style="margin-top: 80px;">
+                <p>まったく同じように、認証局Cの公開鍵証明書は認証局Bによって認証されています。つまり認証局Bの秘密鍵で暗号化されているため認証局Bの公開鍵が必要です。認証局Cの公開鍵を取得するためには認証局Bの公開鍵証明書を取得する必要があります。
+                </p>
+
+
+
+                <img src="../認証局の階層構造/認証局img/認証局4.png" alt="" style="margin-top: 80px;">
+                <p>認証局Bの公開鍵証明書はルート認証局によって認証されています。つまりルート認証局の秘密鍵で暗号化されているためルート認証局の公開鍵が必要です。このようなルート認証局までの道のことを認証パスといいます。
+                    通常ルート認証局の公開鍵はPCに登録してあるので、ルート認証局の公開鍵を使用し、ルート認証局の直下の認証局Bの公開鍵証明書を検証して、認証局Bの公開鍵を取得します。
+                </p>
+
+
+
+                <img src="../認証局の階層構造/認証局img/認証局5.png" alt="" style="margin-top: 80px;">
+                <p>ここで認証局Bの公開鍵を取得できたということは、の認証局Cの公開鍵証明書を検証することができるので認証局Cの公開鍵を取得できます。</p>
+
+
+
+                <img src="../認証局の階層構造/認証局img/認証局6.png" alt="" style="margin-top: 80px;">
+                <p>さらに認証局Cの公開鍵を取得できたということは、の認証局Dの公開鍵証明書を検証することができるので認証局Dの公開鍵を取得できます。</p>
+
+
+
+                <img src="../認証局の階層構造/認証局img/認証局7.png" alt="" style="margin-top: 80px;">
+                <p>上記の画像のように、認証局Dの公開鍵を取得出来たら、サーバ証明書を検証することでサーバの真正性を確認できてサーバの公開鍵を取得することが可能になります。これが一連の認証局の流れになります。</p>
+
+                <h2>ルート認証局の設定について</h2>
+                <p><a href="#publicCertificateAuthority">先ほどパブリック認証局に触れました。</a>
+                    あらかじめブラウザのベンダやOSのベンダがパブリック認証局のルート証明書情報を設定してくれてるので、そもそもルート認証局の証明書の偽装や、なりすまし等を疑わずに使用することができます。</p>
+                    <p>一方で、プライベート認証局のルート証明書を使用する際は、利用するPCなどにルート証明書を登録する必要があります。例えばR社が自身のルート証明書を発行して、
+                        それをもとに会社関係者とやり取りをする場合はクライアントPCなどにR社ルート証明書を安全に渡して登録する必要が出てきます。R社ルート証明書を登録し無かった場合は公開鍵を取り出せないのディジタル署名を検証することができなくなります。
+                    </p>
+
+
+
+                    <p style="margin-top: 130px;">ここで令和2年秋&nbsp;情報処理安全確保支援士試験&nbsp;午後1&nbsp;問2の問題の一部を見てみます。</p>
+                    <img src="../認証局の階層構造/認証局img/支援士過去問.png" alt="" style="margin-top: 40px;">
+                    <p>先ほど説明した通り、R社のプライベート認証局のルート証明書をクライアント先のPCに登録できない場合、R社の公開鍵を取得できないため、R社が自身の秘密鍵で作成したディジタル署名をクライアントは検証することが不可能になります。
+                        <br>よってd=ディジタル署名、e=検証&nbsp;となります。
+                    </p>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <p class="about-me"><a href="../../tec.html">戻る</a></p>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
