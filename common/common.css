@@ -24,7 +24,7 @@
   border: 9px solid rgba(37, 37, 37, 0.1529411765);
   border-top: 9px solid lightseagreen;
   border-radius: 50%;
-  animation: loading 180ms linear 0ms infinite normal both;
+  animation: loading 10ms linear 0ms infinite normal both;
 }
 
 @keyframes loading {
