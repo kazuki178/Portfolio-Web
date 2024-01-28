@@ -1,5 +1,6 @@
 @use "mixin" as *;
 @import url("/common/common.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +22,13 @@ body {
     position: relative;
     padding-top: 80px;
 
+    & .videos{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -1000;
+    }
+
     & .top {
         position: relative;
         display: block;
@@ -28,21 +36,21 @@ body {
         width: 190px;
         height: 190px;
         margin: 0px auto 0 auto;
-
         z-index: 100;
     }
 
     & .card {
-        background-color: rgba(192, 192, 192, 0.176);
+        background-color: rgb(244, 244, 244);
         width: 100%;
         height: auto;
-        min-height: 100vh; 
+        min-height: 100vh;
         position: absolute;
         top: 65%;
         left: 0;
         border-top-right-radius: 80px;
         border-top-left-radius: 80px;
         z-index: 0;
+
 
 
 
@@ -160,6 +168,9 @@ body {
                 border-radius: 20px;
                 overflow: hidden;
                 text-align: center;
+                pointer-events: none;
+                transition: transform 0.3s ease-in-out;
+
 
                 & i {
                     font-size: 40px;
@@ -185,17 +196,19 @@ body {
                     font-size: 17px;
                     letter-spacing: 2px;
                     font-family: 'Lora', serif;
-                    transition: transform 0.3s ease-in-out;
                     text-decoration: none;
                     color: white;
                     display: block;
-                    
-                    &:hover {
-                        transform: scale(1.14);
-                        border-radius: 10px;
-                    }
+                    pointer-events: auto;
 
                 }
+
+                &:hover {
+                    transform: rotateY(30deg)rotateX(-10deg);
+                    
+                }
+
+
             }
         }
 

@@ -34,7 +34,7 @@ body {
     }
 
     & .card {
-        background-color: rgba(192, 192, 192, 0.176);
+        background-color: rgb(244, 244, 244);
         width: 100%;
         height: auto;
         min-height: 100vh; 
@@ -161,6 +161,8 @@ body {
                 border-radius: 20px;
                 overflow: hidden;
                 text-align: center;
+                pointer-events: none;
+                transition: transform 0.3s ease-in-out;
 
                 & i {
                     font-size: 40px;
@@ -190,12 +192,11 @@ body {
                     text-decoration: none;
                     color: white;
                     display: block;
+                    pointer-events: auto;
+                }
+                &:hover {
+                    transform: rotateY(30deg)rotateX(-10deg);
                     
-                    &:hover {
-                        transform: scale(1.14);
-                        border-radius: 10px;
-                    }
-
                 }
             }
         }

@@ -1,5 +1,6 @@
 @use "../../../mixin" as *;
 @import url("/common/common.css");
+
 * {
     margin: 0;
     padding: 0;
@@ -33,17 +34,17 @@ body {
     }
 
     & .card {
-        background-color: rgba(192, 192, 192, 0.176);
+        background-color: rgb(244, 244, 244);
         width: 100%;
         height: auto;
-        min-height: 100vh; 
+        min-height: 100vh;
         position: absolute;
         top: 65%;
         left: 0;
         border-top-right-radius: 80px;
         border-top-left-radius: 80px;
         z-index: 0;
-        
+
 
 
 
@@ -75,10 +76,10 @@ body {
             text-align: center;
             text-decoration: none;
             color: white;
-            margin: 100px  auto 100px auto;
+            margin: 100px auto 100px auto;
 
             &:hover {
-                transform:scale(1.14);
+                transform: scale(1.14);
                 border-radius: 20px;
             }
 
@@ -89,8 +90,8 @@ body {
             }
         }
 
-        
-        
+
+
     }
 
     & .main-text {
@@ -132,6 +133,7 @@ body {
 @media screen and (max-width: 600px) {
     #container .main-text img {
         width: 20%;
-        min-width: 310px; /* 390pxではなく290pxに修正 */
+        min-width: 310px;
+        /* 390pxではなく290pxに修正 */
     }
 }

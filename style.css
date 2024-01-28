@@ -12,6 +12,12 @@ body {
   position: relative;
   padding-top: 80px;
 }
+#container .videos {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+}
 #container .top {
   position: relative;
   display: block;
@@ -22,7 +28,7 @@ body {
   z-index: 100;
 }
 #container .card {
-  background-color: rgba(192, 192, 192, 0.176);
+  background-color: rgb(244, 244, 244);
   width: 100%;
   height: auto;
   min-height: 100vh;
@@ -131,6 +137,8 @@ body {
   border-radius: 20px;
   overflow: hidden;
   text-align: center;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;
 }
 #container .card > .mian-contents .selector i {
   font-size: 40px;
@@ -153,14 +161,13 @@ body {
   font-size: 17px;
   letter-spacing: 2px;
   font-family: "Lora", serif;
-  transition: transform 0.3s ease-in-out;
   text-decoration: none;
   color: white;
   display: block;
+  pointer-events: auto;
 }
-#container .card > .mian-contents .selector .selector-btn:hover {
-  transform: scale(1.14);
-  border-radius: 10px;
+#container .card > .mian-contents .selector:hover {
+  transform: rotateY(30deg) rotateX(-10deg);
 }
 #container .card > .News-tables {
   margin: 90px auto 50px auto;

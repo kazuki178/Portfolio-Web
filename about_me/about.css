@@ -15,6 +15,12 @@ body p {
   position: relative;
   padding-top: 80px;
 }
+#container .videos {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1000;
+}
 #container .top {
   position: relative;
   display: block;
@@ -25,7 +31,7 @@ body p {
   z-index: 100;
 }
 #container .card {
-  background-color: rgba(192, 192, 192, 0.176);
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: auto;
   min-height: 100vh;

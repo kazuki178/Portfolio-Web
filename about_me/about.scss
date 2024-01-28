@@ -23,6 +23,14 @@ body {
     position: relative;
     padding-top: 80px;
 
+    & .videos{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -1000;
+    }
+
+
     & .top {
         position: relative;
         display: block;
@@ -36,7 +44,7 @@ body {
 
 
     & .card {
-        background-color: rgba(192, 192, 192, 0.176);
+        background-color: rgb(255, 255, 255);
         width: 100%;
         height: auto;
         min-height: 100vh; 

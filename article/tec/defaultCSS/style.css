@@ -24,7 +24,7 @@ body {
   z-index: 100;
 }
 #container .card {
-  background-color: rgba(192, 192, 192, 0.176);
+  background-color: rgb(244, 244, 244);
   width: 100%;
   height: auto;
   min-height: 100vh;
@@ -100,6 +100,7 @@ body {
 @media screen and (max-width: 600px) {
   #container .main-text img {
     width: 20%;
-    min-width: 310px; /* 390pxではなく290pxに修正 */
+    min-width: 310px;
+    /* 390pxではなく290pxに修正 */
   }
 }/*# sourceMappingURL=style.css.map */
