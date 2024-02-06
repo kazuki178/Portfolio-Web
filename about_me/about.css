@@ -130,15 +130,6 @@ body p {
   text-decoration: none;
   display: block;
 }
-#container .card .leaningArea {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 20px;
-}
-#container .card .leaningAreaChild {
-  text-align: center;
-  margin-top: 20px;
-}
 
 @media screen and (max-width: 1000px) {
   #container .top {
