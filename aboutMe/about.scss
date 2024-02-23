@@ -1,0 +1,732 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(#000000, rgb(2 9 1));
+    // display flex はblockにonload時に変更させる
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+
+.loader {
+    width: 300px;
+    height: 300px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    span {
+        position: absolute;
+        border: 2px solid #09d532;
+        width: 100%;
+        height: 100%;
+        animation: animate 5s linear infinite;
+
+        &:nth-child(1) {
+            border-radius: 43% 57% 70% 30% / 30% 30% 70% 70%;
+        }
+
+        &:nth-child(2) {
+            animation-direction: reverse;
+            border-radius: 43% 57% 70% 30% / 65% 55% 45% 35%;
+        }
+
+        &:nth-child(3) {
+            border-radius: 29% 71% 33% 67% / 60% 76% 24% 40%;
+        }
+
+        &:nth-child(4) {
+            animation-direction: reverse;
+            border-radius: 84% 16% 58% 42% / 46% 76% 24% 54%;
+        }
+    }
+
+    h2 {
+        color: white;
+        font-size: 26px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 700;
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+// 全共通
+.Allcontent {
+    color: white;
+    display: none;
+}
+
+
+// ヘッダー
+header {
+    display: flex;
+    flex-wrap: wrap;
+
+    .container {
+        display: flex;
+        height: 200px;
+        width: 100%;
+        // 幅に余白
+        margin: 50px 20px auto 20px;
+        align-items: center;
+        justify-content: center;
+
+        .myName {
+            font-family: "Anta", sans-serif;
+            margin-left: 75px;
+            font-size: 40px;
+
+            span {
+                display: inline-block;
+            }
+
+            .min-myName {
+                margin-left: 10px;
+                font-size: 20px;
+            }
+        }
+
+        .logo-Animation {
+            width: 170px;
+            height: 170px;
+            /* background-color: red; */
+            position: relative;
+
+
+            span {
+                position: absolute;
+                border: 2px solid #09d532;
+                width: 100%;
+                height: 100%;
+                animation: animate 5s linear infinite;
+
+                &:nth-child(1) {
+                    border-radius: 43% 57% 70% 30% / 30% 30% 70% 70%;
+                }
+
+                &:nth-child(2) {
+                    animation-direction: reverse;
+                    border-radius: 43% 57% 70% 30% / 65% 55% 45% 35%;
+                }
+
+                &:nth-child(3) {
+                    border-radius: 29% 71% 33% 67% / 60% 76% 24% 40%;
+                }
+
+                &:nth-child(4) {
+                    animation-direction: reverse;
+                    border-radius: 84% 16% 58% 42% / 46% 76% 24% 54%;
+                }
+            }
+        }
+    }
+}
+
+
+
+// セクション１
+.section-01 {
+    display: flex;
+    justify-content: center;
+    // 幅に余白
+    margin: 90px 20px auto 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.meImg {
+    width: 210px;
+    height: 210px;
+    border-radius: 40%;
+    margin: 30px;
+}
+
+.abotMe {
+    display: block;
+    // background-color: red;
+    background-color: rgba(255, 255, 255, 0.064);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    width: 320px;
+    height: 190px;
+    margin-left: 30px;
+    letter-spacing: 3px;
+
+    .jobName {
+        margin: 20px 0 0 30px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    h3 {
+        margin: 20px 0 0 90px;
+    }
+
+    .romaji {
+        margin: 0 0 0 70px;
+    }
+
+    .certification {
+        margin: 20px 0 0 30px;
+        font-size: 15px;
+    }
+}
+
+
+
+// about-meボタン
+.aboutMeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+
+
+// セクション2
+.section-02 {
+    margin-top: 10px;
+    // background-color: red;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.media-icons {
+    ul {
+        display: flex;
+        list-style: none;
+    }
+
+    a {
+        color: white;
+        font-size: 35px;
+        margin: 60px;
+    }
+}
+
+
+//　セクション3
+.section-03 {
+    margin: 160px auto 100px auto;
+}
+
+.container {
+    .license {
+        p {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 35px;
+        }
+    }
+
+    display: flex;
+    justify-content: center;
+
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: red;
+    background-color: rgba(255, 255, 255, 0.064);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    width: 700px;
+    height: 380px;
+    margin: 20px;
+    letter-spacing: 3px;
+    padding: 50px;
+
+    .inText {
+        line-height: 2;
+    }
+
+
+
+    a {
+        height: 40px;
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+.read {
+    margin-bottom: 60px;
+}
+
+
+
+// section 04
+.main-tech{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.tech-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    img {
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    header {
+        .container {
+            .myName {
+                font-size: 30px;
+
+                .min-myName {
+                    margin-left: 10px;
+                    font-size: 15px;
+                }
+            }
+
+            .logo-Animation {
+                width: 130px;
+                height: 130px;
+                /* background-color: red; */
+                position: relative;
+
+
+                span {
+                    position: absolute;
+                    border: 2px solid #09d532;
+                    width: 100%;
+                    height: 100%;
+                    animation: animate 5s linear infinite;
+
+                    &:nth-child(1) {
+                        border-radius: 43% 57% 70% 30% / 30% 30% 70% 70%;
+                    }
+
+                    &:nth-child(2) {
+                        animation-direction: reverse;
+                        border-radius: 43% 57% 70% 30% / 65% 55% 45% 35%;
+                    }
+
+                    &:nth-child(3) {
+                        border-radius: 29% 71% 33% 67% / 60% 76% 24% 40%;
+                    }
+
+                    &:nth-child(4) {
+                        animation-direction: reverse;
+                        border-radius: 84% 16% 58% 42% / 46% 76% 24% 54%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 692px) {
+    header {
+        .container {
+            .myName {
+                font-size: 25px;
+
+                .min-myName {
+                    margin-left: 10px;
+                    font-size: 13px;
+                }
+            }
+
+            .logo-Animation {
+                width: 100px;
+                height: 100px;
+                /* background-color: red; */
+                position: relative;
+
+
+                span {
+                    position: absolute;
+                    border: 2px solid #09d532;
+                    width: 100%;
+                    height: 100%;
+                    animation: animate 5s linear infinite;
+
+                    &:nth-child(1) {
+                        border-radius: 43% 57% 70% 30% / 30% 30% 70% 70%;
+                    }
+
+                    &:nth-child(2) {
+                        animation-direction: reverse;
+                        border-radius: 43% 57% 70% 30% / 65% 55% 45% 35%;
+                    }
+
+                    &:nth-child(3) {
+                        border-radius: 29% 71% 33% 67% / 60% 76% 24% 40%;
+                    }
+
+                    &:nth-child(4) {
+                        animation-direction: reverse;
+                        border-radius: 84% 16% 58% 42% / 46% 76% 24% 54%;
+                    }
+                }
+            }
+        }
+    }
+
+    .meImg {
+        width: 180px;
+        height: 180px;
+        border-radius: 40%;
+        margin: 30px;
+    }
+
+    .abotMe {
+        display: block;
+        // background-color: red;
+        background-color: rgba(255, 255, 255, 0.064);
+        backdrop-filter: blur(20px);
+        border-radius: 30px;
+        width: 250px;
+        height: 160px;
+        margin-left: 30px;
+        letter-spacing: 3px;
+
+        .jobName {
+            margin: 20px 0 0 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        h3 {
+            margin: 20px 0 0 90px;
+        }
+
+        .romaji {
+            margin: 0 0 0 70px;
+        }
+
+        .certification {
+            margin: 15px 0 0 30px;
+            font-size: 15px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 590px) {
+    header {
+        .container {
+            .myName {
+                font-size: 25px;
+                margin-left: 15px;
+
+                .min-myName {
+                    margin-left: 10px;
+                    font-size: 13px;
+                }
+            }
+
+            .logo-Animation {
+                width: 100px;
+                height: 100px;
+                /* background-color: red; */
+                position: relative;
+            }
+        }
+    }
+
+    .meImg {
+        width: 180px;
+        height: 180px;
+        border-radius: 40%;
+        margin: 10px;
+    }
+
+
+    .abotMe {
+        display: block;
+        // background-color: red;
+        background-color: rgba(255, 255, 255, 0.064);
+        backdrop-filter: blur(20px);
+        border-radius: 30px;
+        width: 250px;
+        height: 160px;
+        margin-left: 10px;
+        letter-spacing: 3px;
+
+        .jobName {
+            margin: 20px 0 0 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        h3 {
+            margin: 20px 0 0 90px;
+        }
+
+        .romaji {
+            margin: 0 0 0 70px;
+        }
+
+        .certification {
+            margin: 15px 0 0 30px;
+            font-size: 15px;
+        }
+    }
+
+    .card{
+        height: 500px;
+    }
+
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 499px) {
+    header {
+        .container {
+            .myName {
+                font-size: 20px;
+                margin-left: 15px;
+                text-align: center;
+
+                .min-myName {
+                    margin-left: 10px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    
+    .card{
+        height: 650px;
+    }
+
+
+}
+
+@media screen and (max-width: 446px) {
+
+    .section-01{
+        margin-top: 0;
+    }
+    .section-03{
+        margin-top: 50px;
+    }
+    header {
+        .container {
+            .myName {
+                font-size: 20px;
+                margin-left: 15px;
+                text-align: center;
+
+                .min-myName {
+                    margin-left: 10px;
+                    font-size: 13px;
+                }
+            }
+
+            .logo-Animation {
+                width: 50px;
+                height: 50px;
+                /* background-color: red; */
+                position: relative;
+            }
+        }
+    }
+
+    .meImg {
+        width: 140px;
+        height: 140px;
+        border-radius: 40%;
+        margin: 10px;
+    }
+
+
+    .abotMe {
+        display: block;
+        // background-color: red;
+        background-color: rgba(255, 255, 255, 0.064);
+        backdrop-filter: blur(20px);
+        border-radius: 30px;
+        width: 210px;
+        height: 140px;
+        margin-left: 10px;
+        letter-spacing: 3px;
+
+        .jobName {
+            margin: 20px 0 0 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        h3 {
+            margin: 10px 0 0 60px;
+            font-size: 19px;
+        }
+
+        .romaji {
+            margin: 0 0 0 30px;
+        }
+
+        .certification {
+            margin: 15px 0 0 30px;
+            font-size: 12px;
+        }
+    }
+
+    .media-icons {
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        a {
+            color: white;
+            font-size: 25px;
+            margin: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 418px) {
+    header {
+        .container {
+            .myName {
+                font-size: 20px;
+                margin-left: 15px;
+                text-align: center;
+
+                .min-myName {
+                    margin-left: 10px;
+                    font-size: 13px;
+                }
+            }
+
+            .logo-Animation {
+                width: 40px;
+                height: 40px;
+                /* background-color: red; */
+                position: relative;
+            }
+        }
+    }
+
+    .meImg {
+        width: 120px;
+        height: 120px;
+        border-radius: 40%;
+        margin: 10px;
+    }
+
+    .card{
+        height: 750px;
+    }
+
+    .abotMe {
+        display: block;
+        // background-color: red;
+        background-color: rgba(255, 255, 255, 0.064);
+        backdrop-filter: blur(20px);
+        border-radius: 30px;
+        width: 190px;
+        height: 120px;
+        margin-left: 10px;
+        letter-spacing: 3px;
+
+        .jobName {
+            margin: 17px 0 0 30px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        h3 {
+            margin: 10px 0 0 60px;
+            font-size: 16px;
+        }
+
+        .romaji {
+            margin: 0 0 0 30px;
+        }
+
+        .certification {
+            margin: 7px 0 0 40px;
+            font-size: 12px;
+        }
+    }
+
+
+    .media-icons {
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        a {
+            color: white;
+            font-size: 25px;
+            margin: 30px;
+        }
+    }
+}
