@@ -1,165 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
-    <meta property="og:title" content="矢橋和樹 || Engineer">
-    <meta name="description" content="矢橋和樹 || エンジニア ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="msvalidate.01" content="7FD3245E56CA42E3399A0D024714AB88" />
-    <title>kazyu || 矢橋和樹</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- ↓ job-name font -->
+    <!-- index font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- ホバー時css -->
+    <link rel="stylesheet" href="./partsCSS/hover_Action.css">
+    <!-- read Btn css -->
+    <link rel="stylesheet" href="./partsCSS/readBtn.css">
+
+    <!-- メディアクエリ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
 </head>
 
 <body>
 
-    <!-- 　　　　　　　　 ,-､　　　　　　　　　　　　,.-､ 
-    　　　　　　　 ./:::::＼　　　　　　　　　 ／::::::ヽ 
-    　　　　　　　/::::::::::::;ゝ--──-- ､._/::::::::::::::| 
-    　　　　　　 /,.-‐''"´ 　　　　　　　　 ＼:::::::::::| 
-    　　　　　／　 　　　　　　　　　　　　　　ヽ､::::| 
-    　　　　/　　　 　　　　　　　　　　　　　　　　ヽ 
-    　　 　 l　　　　＼　　　　　　 　 　 　 　 　　 l 
-    　　　 .|　　　 ●　　　　　　　　　　／　　　　 | 
-    　 　 　l　　, , ,　　　　　　　　　　　●　　　　 l　　　 見たにゃ～!!!!
-    　　　　` ､　　　　　　(_人__丿　　　　､､､ 　 / 
-    　　　　　　`ｰ ､__　　　　　　　 　　 　　　 ／ 
-    　　　　　　　　　/`'''ｰ‐‐──‐‐‐┬'''""´ 
-    　　　　　　　　./　　　　　　　　___　l　__ 
-    　　　　　　 　 l　　 ./　　　　／　 |／　| 
-    　　　　　　 　 `ｰ-<　　　　/　　./　　./ 
-    　　　　　　　　　　　`ｰ‐--{___／ゝ､,ノ 
 
 
 
-
-
-
-        
-　　　　　　　　　　lヽ、　　　 　 　 　 　 /ヽ
-　　　　　　　 　 　i!　ﾞヽ、 　 　　　　／ 　ﾞi!　　　　　 ..,,　.,,.;;''⌒ヽ
-　　　　 　 　 　 　l　　　 ゝ-─‐-／'　　　 i!　 , ,__,,;'"　 "';　　　 ,ﾉ
-　　　　　　　　　,／"　　　　　　　 　 　　　i!''"　 ....ﾞ'';;..,,;;　　,,Y"
-　　　　　　　　,/'　　　　　　　　　　　　　 〈　　　　　　　　　'i;;- ､,,　　
-　　　　 　 　　i'　　　　　　　　　　　　　　 'i,　　　　　　　　 　　 　 ﾞ"ヽ、　
-　　　 　 　 　 i!　●　　　　　●　　 　＊ ,'i　　　　　　　　　　 　　　　ﾞ）
-　　　　　　　　'i,::: 　 ﾄ─‐ｲ 　 　:::::::　　,/　　　　'　　　　　ﾞ",;''i,-‐'"
-　　　　　,,-‐''"ヽ､ 　 ヽ,_ノ　　　　 ,,-‐　　　　　　　　　,..;;;ﾞ"
-　　　　（　　　　,,, '' 　　　　 ,,.-‐''"　　　　　　　,,'"´｀`´
-　　　　 ヽ,..-‐''　　　 ,.-‐''"　　　　　　ノ-‐''"´
-　　　　　　　　　　　（　　　　　　 ,. -'"
-　　　　　　　　　　　　 ヽ、,,.. -‐'''"
-    -->
-
-
-
-
-
-
-    <div class="loading">
-        <span class="circle"></span>
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <h2>Now Loading...</h2>
     </div>
-    <script>
-        const loading = document.querySelector('.loading');
 
-        window.addEventListener('load', () => {
-            loading.classList.add('hide');
-        }, false);
+    <div class="Allcontent">
 
-    </script> 
-
-
-    <div id="container">
-        <video src="/img/u700.mp4" loop autoplay muted playsinline  class="videos"></video>
-        <img class="top" src="img/index_me2.jpg" alt="">
-
-        <div class="card">
-
-            <div class="name">
-                <h1>矢橋&nbsp;和樹</h1>
-                <div class="job-name">
-                    <spna class="initial-color">S</spna>oftware&nbsp;<spna class="initial-color">E</spna>ngineer
+    
+        <!-- 緑の回転spanとあいさつ文のheader -->
+        <header>
+            <div class="container">
+                <div class="logo-Animation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                <div class="names">yahashi&nbsp;kazuki</div>
-                <div class="license">
-                    <spna style="color: rgb(211, 39, 0);">応用</spna>情報技術者
-                </div>
+                <h2 class="myName">Hi 👋, I'm <span> Kazuki Yahashi <span class="min-myName">矢橋和樹</span></span></h2>
             </div>
+        </header>
 
+        <!-- アイコンとアイコンの左の名刺的なもの -->
+        <section class="section-01">
+            <div class="container">
+                <img src="./images/me.jpg" alt="" class="meImg">
 
-            <ul class="icons">
-                <li><a href="https://github.com/kazuki178" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
-                            height="60px" width="30px"
-                            viewBox="0 0 496 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-                            <path
-                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                        </svg></a></li>
-                <li><a href="https://twitter.com/kazyu_neko" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
-                            height="60px" width="30px"
-                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-                            <path
-                                d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
-                        </svg></a></li>
-                <li><a href="https://qiita.com/kazyu" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
-                            height="60px" width="30px"
-                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
-                            <path
-                                d="M64 256c0 88.4 71.6 160 160 160c28.9 0 56-7.7 79.4-21.1l-72-86.4c-11.3-13.6-9.5-33.8 4.1-45.1s33.8-9.5 45.1 4.1l70.9 85.1C371.9 325.8 384 292.3 384 256c0-88.4-71.6-160-160-160S64 167.6 64 256zM344.9 444.6C310 467 268.5 480 224 480C100.3 480 0 379.7 0 256S100.3 32 224 32s224 100.3 224 224c0 56.1-20.6 107.4-54.7 146.7l47.3 56.8c11.3 13.6 9.5 33.8-4.1 45.1s-33.8 9.5-45.1-4.1l-46.6-55.9z" />
-                        </svg></a></li>
-            </ul>
-
-            <div class="about-me"><a href="/about_me/about_me.html">about me</a></div>
-
-
-            <div class="mian-contents">
-                <div class="selector"><i class="fa-solid fa-code fa-beat-fade" style="color: rgb(74, 74, 185);"></i>
-                    <h3>Develop</h3>
-                    <a href="#" class="selector-btn">開発物</a>
+                <div class="abotMe">
+                    <p class="jobName"><span style="color: #09d532;">E</span>ngineer</p>
+                    <h3>矢橋和樹</h3>
+                    <p class="romaji">yahashi kazuki</p>
+                    <p class="certification"><span style="color: rgb(184, 21, 21);">応</span>用情報技術者</p>
                 </div>
-                <div class="selector"><i class="fa-solid fa-blog fa-beat-fade" style="color: rgb(102, 118, 124);"></i>
-                    <h3>Article</h3>
-                    <a href="/article/article.html" class="selector-btn">技術記事</a>
-                </div>
+
             </div>
+        </section>
 
-
-
-            <div class="News-tables">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>
-                                <p class="News-top">News</p>
-                            </th>
-                        </tr>
-                    </thead>
-                    <!-- <tr>
-                        <td class="News-row">【2023/12/21】&nbsp;<span class="News-text">応用情報技術者試験に合格しました！<span><a
-                                        href="/article/info/info_in/" style="text-decoration: none;"><span
-                                            style="color: rgb(233, 0, 0);">記事を読む</span></a></td>
-                    </tr> -->
-                    <tr>
-                        <td class="News-row">【2023/12/19】&nbsp;<span class="News-text">webサイトを一新しました。</span></td>
-                    </tr>
-                </table>
-            </div>
-
+        <div class="aboutMeBtn">
+            <a href="#" class="read" target="_blank">About Me</a>
         </div>
+
+        <!-- 各種メディアのリンク -->
+        <section class="section-02">
+            <div class="container">
+                <div class="media-icons">
+                    <ul>
+                        <li><a href="https://github.com/kazuki178" class="underline" target="_blank"><i
+                                    class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://twitter.com/kazyu_neko" class="underline" target="_blank"><i
+                                    class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="https://qiita.com/kazyu" class="underline" target="_blank"><i
+                                    class="fa-solid fa-q"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 各種リンクカード作成  開発物 and 情報記事等 -->
+        <section class="section-03">
+            <div class="container">
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+                    <p class="nextPage">開発物</p>
+                    <a href="https://github.com/kazuki178" class="read" target="_blank"><p>Read</p></a>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-book"></i>
+                    <p class="nextPage">情報技術</p>
+                    <a href="https://github.com/kazuki178" class="read" target="_blank"><p>Read</p></a>
+                </div>
+            </div>
+        </section>
     </div>
-<!-- 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="./scroll.js"></script> -->
+
+
+
+    <!-- fontawesome呼び出し -->
     <script src="https://kit.fontawesome.com/74723dd57b.js" crossorigin="anonymous"></script>
+    <script src="./loadingAnimation/animation.js"></script>
 
 </body>
 

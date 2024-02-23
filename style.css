@@ -1,218 +1,654 @@
-@import url("/common/common.css");
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(#000000, rgb(2, 9, 1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-#container {
-  position: relative;
-  padding-top: 80px;
-}
-#container .videos {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: -1000;
-}
-#container .top {
-  position: relative;
-  display: block;
-  border-radius: 50%;
-  width: 190px;
-  height: 190px;
-  margin: 0px auto 0 auto;
-  z-index: 100;
-}
-#container .card {
-  background-color: rgb(244, 244, 244);
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-  position: absolute;
-  top: 65%;
-  left: 0;
-  border-top-right-radius: 80px;
-  border-top-left-radius: 80px;
-  z-index: 0;
-}
-#container .card .names {
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 17px;
-  letter-spacing: 4px;
-}
-#container .card .name {
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 17px;
-  letter-spacing: 4px;
-}
-#container .card .name > h1 {
-  font-family: "Lora", serif;
-  margin-top: 9px;
-}
-#container .card .name:nth-of-type(2) {
-  margin-top: 60px;
-  top: 8px;
-}
-#container .card .name > .job-name {
-  position: absolute;
-  top: 10.5%;
-  left: 45%;
-  transform: translate(-70%, -90%);
-  font-size: 17px;
-  letter-spacing: 4px;
-  font-weight: bold;
-  font-family: "Lora", serif;
-}
-#container .card .name > .job-name > .initial-color {
-  color: rgba(38, 150, 195, 0.7490196078);
-}
-#container .card .name > .license {
-  position: absolute;
-  top: 180%;
-  transform: translate(70%, -90%);
-  font-size: 17px;
-  letter-spacing: 4px;
-  font-weight: bold;
-  font-family: "Lora", serif;
-}
-#container .card .name > .license > .initial-color {
-  color: rgba(38, 150, 195, 0.7490196078);
-}
-#container .card .icons {
+.loader {
+  width: 300px;
+  height: 300px;
+  /* background-color: red; */
   display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.loader span {
   position: absolute;
-  list-style: none;
-  top: 350px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 200;
+  border: 2px solid #09d532;
+  width: 100%;
+  height: 100%;
+  animation: animate 5s linear infinite;
 }
-#container .card .icons li {
-  transition: transform 0.3s ease-in-out;
+.loader span:nth-child(1) {
+  border-radius: 43% 57% 70% 30%/30% 30% 70% 70%;
 }
-#container .card .icons li svg {
-  margin: 0 30px 0 30px;
+.loader span:nth-child(2) {
+  animation-direction: reverse;
+  border-radius: 43% 57% 70% 30%/65% 55% 45% 35%;
 }
-#container .card .icons li:hover {
-  transform: scale(1.4);
-  cursor: pointer;
+.loader span:nth-child(3) {
+  border-radius: 29% 71% 33% 67%/60% 76% 24% 40%;
 }
-#container .card .about-me {
-  background-color: skyblue;
-  padding: 3px;
-  border-radius: 7%;
+.loader span:nth-child(4) {
+  animation-direction: reverse;
+  border-radius: 84% 16% 58% 42%/46% 76% 24% 54%;
+}
+.loader h2 {
+  color: white;
+  font-size: 26px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 700;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.Allcontent {
+  color: white;
+  display: none;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+}
+header .container {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  margin: 50px 20px auto 20px;
+  align-items: center;
+  justify-content: center;
+}
+header .container .myName {
+  font-family: "Anta", sans-serif;
+  margin-left: 75px;
+  font-size: 40px;
+}
+header .container .myName span {
+  display: inline-block;
+}
+header .container .myName .min-myName {
+  margin-left: 10px;
+  font-size: 20px;
+}
+header .container .logo-Animation {
+  width: 170px;
+  height: 170px;
+  /* background-color: red; */
+  position: relative;
+}
+header .container .logo-Animation span {
   position: absolute;
-  top: 440px;
-  left: 50%;
-  width: 100px;
-  transform: translate(-50%, -50%);
-  font-size: 17px;
-  letter-spacing: 2px;
-  font-family: "Lora", serif;
-  transition: transform 0.3s ease-in-out;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  z-index: 200;
+  border: 2px solid #09d532;
+  width: 100%;
+  height: 100%;
+  animation: animate 5s linear infinite;
 }
-#container .card .about-me:hover {
-  transform: translate(-50%, -50%) scale(1.14);
-  border-radius: 20px;
+header .container .logo-Animation span:nth-child(1) {
+  border-radius: 43% 57% 70% 30%/30% 30% 70% 70%;
 }
-#container .card .about-me > a {
-  color: white;
-  text-decoration: none;
+header .container .logo-Animation span:nth-child(2) {
+  animation-direction: reverse;
+  border-radius: 43% 57% 70% 30%/65% 55% 45% 35%;
+}
+header .container .logo-Animation span:nth-child(3) {
+  border-radius: 29% 71% 33% 67%/60% 76% 24% 40%;
+}
+header .container .logo-Animation span:nth-child(4) {
+  animation-direction: reverse;
+  border-radius: 84% 16% 58% 42%/46% 76% 24% 54%;
+}
+
+.section-01 {
+  display: flex;
+  justify-content: center;
+  margin: 90px 20px auto 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.meImg {
+  width: 210px;
+  height: 210px;
+  border-radius: 40%;
+  margin: 30px;
+}
+
+.abotMe {
   display: block;
+  background-color: rgba(255, 255, 255, 0.064);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 30px;
+  width: 320px;
+  height: 190px;
+  margin-left: 30px;
+  letter-spacing: 3px;
 }
-#container .card > .mian-contents {
+.abotMe .jobName {
+  margin: 20px 0 0 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.abotMe h3 {
+  margin: 20px 0 0 90px;
+}
+.abotMe .romaji {
+  margin: 0 0 0 70px;
+}
+.abotMe .certification {
+  margin: 20px 0 0 30px;
+  font-size: 15px;
+}
+
+.aboutMeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.section-02 {
+  margin-top: 160px;
+}
+
+.container {
   display: flex;
   justify-content: center;
 }
-#container .card > .mian-contents .selector {
-  width: 130px;
-  height: 270px;
-  background-color: rgba(198, 197, 197, 0.142);
-  padding: 20px 35px;
-  margin: 540px 10px 40px 10px;
-  border-radius: 20px;
-  overflow: hidden;
-  text-align: center;
-  pointer-events: none;
-  transition: transform 0.3s ease-in-out;
+
+.media-icons ul {
+  display: flex;
+  list-style: none;
 }
-#container .card > .mian-contents .selector i {
-  font-size: 40px;
-  margin-top: 50px;
-}
-#container .card > .mian-contents .selector h3 {
-  margin-top: 40px;
-  font-family: "Lora", serif;
-  font-size: 18px;
-}
-#container .card > .mian-contents .selector p {
-  margin-top: 20px;
-}
-#container .card > .mian-contents .selector .selector-btn {
-  background-color: skyblue;
-  width: 90px;
-  padding: 3px;
-  margin: 50px auto 0 auto;
-  border-radius: 7%;
-  font-size: 17px;
-  letter-spacing: 2px;
-  font-family: "Lora", serif;
-  text-decoration: none;
+.media-icons a {
   color: white;
-  display: block;
-  pointer-events: auto;
-}
-#container .card > .mian-contents .selector:hover {
-  transform: rotateY(30deg) rotateX(-10deg);
-}
-#container .card > .News-tables {
-  margin: 90px auto 50px auto;
-  padding-bottom: 30px;
-  width: 80%;
-  max-width: 900px;
-}
-#container .card > .News-tables table {
-  margin: 0 auto;
-}
-#container .card > .News-tables table .News-top {
-  color: rgb(0, 0, 0);
-  font-family: "Lora", serif;
-  font-size: 23px;
-  margin-bottom: 30px;
-}
-#container .card > .News-tables table td {
-  padding-top: 20px;
-  border-bottom: solid skyblue;
-  text-align: left;
-}
-#container .card > .News-tables table td .News-text {
-  text-align: center;
-  display: block;
+  font-size: 35px;
+  margin: 60px;
 }
 
-@media screen and (max-width: 1000px) {
-  #container .top {
-    width: 150px;
-    height: 150px;
+.section-03 {
+  margin: 160px auto 100px auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: red;
+  background-color: rgba(255, 255, 255, 0.064);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 30px;
+  width: 230px;
+  height: 280px;
+  margin: 20px;
+  letter-spacing: 3px;
+}
+.card .nextPage {
+  margin-top: 15px;
+}
+.card i {
+  font-size: 40px;
+  margin-top: 20px;
+}
+.card a {
+  height: 40px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.card a p {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 900px) {
+  header .container .myName {
+    font-size: 30px;
+  }
+  header .container .myName .min-myName {
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  header .container .logo-Animation {
+    width: 130px;
+    height: 130px;
+    /* background-color: red; */
+    position: relative;
+  }
+  header .container .logo-Animation span {
+    position: absolute;
+    border: 2px solid #09d532;
+    width: 100%;
+    height: 100%;
+    animation: animate 5s linear infinite;
+  }
+  header .container .logo-Animation span:nth-child(1) {
+    border-radius: 43% 57% 70% 30%/30% 30% 70% 70%;
+  }
+  header .container .logo-Animation span:nth-child(2) {
+    animation-direction: reverse;
+    border-radius: 43% 57% 70% 30%/65% 55% 45% 35%;
+  }
+  header .container .logo-Animation span:nth-child(3) {
+    border-radius: 29% 71% 33% 67%/60% 76% 24% 40%;
+  }
+  header .container .logo-Animation span:nth-child(4) {
+    animation-direction: reverse;
+    border-radius: 84% 16% 58% 42%/46% 76% 24% 54%;
   }
 }
-@media screen and (max-width: 600px) {
-  #container .top {
+@media screen and (max-width: 692px) {
+  header .container .myName {
+    font-size: 25px;
+  }
+  header .container .myName .min-myName {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  header .container .logo-Animation {
+    width: 100px;
+    height: 100px;
+    /* background-color: red; */
+    position: relative;
+  }
+  header .container .logo-Animation span {
+    position: absolute;
+    border: 2px solid #09d532;
+    width: 100%;
+    height: 100%;
+    animation: animate 5s linear infinite;
+  }
+  header .container .logo-Animation span:nth-child(1) {
+    border-radius: 43% 57% 70% 30%/30% 30% 70% 70%;
+  }
+  header .container .logo-Animation span:nth-child(2) {
+    animation-direction: reverse;
+    border-radius: 43% 57% 70% 30%/65% 55% 45% 35%;
+  }
+  header .container .logo-Animation span:nth-child(3) {
+    border-radius: 29% 71% 33% 67%/60% 76% 24% 40%;
+  }
+  header .container .logo-Animation span:nth-child(4) {
+    animation-direction: reverse;
+    border-radius: 84% 16% 58% 42%/46% 76% 24% 54%;
+  }
+  .meImg {
+    width: 180px;
+    height: 180px;
+    border-radius: 40%;
+    margin: 30px;
+  }
+  .abotMe {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.064);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 30px;
+    width: 250px;
+    height: 160px;
+    margin-left: 30px;
+    letter-spacing: 3px;
+  }
+  .abotMe .jobName {
+    margin: 20px 0 0 30px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .abotMe h3 {
+    margin: 20px 0 0 90px;
+  }
+  .abotMe .romaji {
+    margin: 0 0 0 70px;
+  }
+  .abotMe .certification {
+    margin: 15px 0 0 30px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 590px) {
+  header .container .myName {
+    font-size: 25px;
+    margin-left: 15px;
+  }
+  header .container .myName .min-myName {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  header .container .logo-Animation {
+    width: 100px;
+    height: 100px;
+    /* background-color: red; */
+    position: relative;
+  }
+  .meImg {
+    width: 180px;
+    height: 180px;
+    border-radius: 40%;
+    margin: 10px;
+  }
+  .abotMe {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.064);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 30px;
+    width: 250px;
+    height: 160px;
+    margin-left: 10px;
+    letter-spacing: 3px;
+  }
+  .abotMe .jobName {
+    margin: 20px 0 0 30px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .abotMe h3 {
+    margin: 20px 0 0 90px;
+  }
+  .abotMe .romaji {
+    margin: 0 0 0 70px;
+  }
+  .abotMe .certification {
+    margin: 15px 0 0 30px;
+    font-size: 15px;
+  }
+  .card {
+    width: 170px;
+    height: 240px;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 590px) {
+  header .container .myName {
+    font-size: 25px;
+    margin-left: 15px;
+  }
+  header .container .myName .min-myName {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  header .container .logo-Animation {
+    width: 80px;
+    height: 80px;
+    /* background-color: red; */
+    position: relative;
+  }
+  .meImg {
+    width: 140px;
+    height: 140px;
+    border-radius: 40%;
+    margin: 10px;
+  }
+  .abotMe {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.064);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 30px;
+    width: 210px;
+    height: 140px;
+    margin-left: 10px;
+    letter-spacing: 3px;
+  }
+  .abotMe .jobName {
+    margin: 20px 0 0 30px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .abotMe h3 {
+    margin: 10px 0 0 60px;
+    font-size: 19px;
+  }
+  .abotMe .romaji {
+    margin: 0 0 0 30px;
+  }
+  .abotMe .certification {
+    margin: 15px 0 0 30px;
+    font-size: 12px;
+  }
+  .card {
+    width: 170px;
+    height: 240px;
+    margin: 10px;
+  }
+  .media-icons ul {
+    display: flex;
+    list-style: none;
+  }
+  .media-icons a {
+    color: white;
+    font-size: 25px;
+    margin: 30px;
+  }
+}
+@media screen and (max-width: 590px) {
+  header .container .myName {
+    font-size: 25px;
+    margin-left: 15px;
+  }
+  header .container .myName .min-myName {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  header .container .logo-Animation {
+    width: 70px;
+    height: 70px;
+    /* background-color: red; */
+    position: relative;
+  }
+  .meImg {
+    width: 140px;
+    height: 140px;
+    border-radius: 40%;
+    margin: 10px;
+  }
+  .abotMe {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.064);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 30px;
+    width: 210px;
+    height: 140px;
+    margin-left: 10px;
+    letter-spacing: 3px;
+  }
+  .abotMe .jobName {
+    margin: 20px 0 0 30px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .abotMe h3 {
+    margin: 10px 0 0 60px;
+    font-size: 19px;
+  }
+  .abotMe .romaji {
+    margin: 0 0 0 30px;
+  }
+  .abotMe .certification {
+    margin: 15px 0 0 30px;
+    font-size: 12px;
+  }
+  .card {
+    width: 170px;
+    height: 240px;
+    margin: 10px;
+  }
+  .media-icons ul {
+    display: flex;
+    list-style: none;
+  }
+  .media-icons a {
+    color: white;
+    font-size: 25px;
+    margin: 30px;
+  }
+}
+@media screen and (max-width: 499px) {
+  header .container .myName {
+    font-size: 20px;
+    margin-left: 15px;
+    text-align: center;
+  }
+  header .container .myName .min-myName {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 446px) {
+  header .container .myName {
+    font-size: 20px;
+    margin-left: 15px;
+    text-align: center;
+  }
+  header .container .myName .min-myName {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  header .container .logo-Animation {
+    width: 50px;
+    height: 50px;
+    /* background-color: red; */
+    position: relative;
+  }
+  .meImg {
+    width: 140px;
+    height: 140px;
+    border-radius: 40%;
+    margin: 10px;
+  }
+  .abotMe {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.064);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 30px;
+    width: 210px;
+    height: 140px;
+    margin-left: 10px;
+    letter-spacing: 3px;
+  }
+  .abotMe .jobName {
+    margin: 20px 0 0 30px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .abotMe h3 {
+    margin: 10px 0 0 60px;
+    font-size: 19px;
+  }
+  .abotMe .romaji {
+    margin: 0 0 0 30px;
+  }
+  .abotMe .certification {
+    margin: 15px 0 0 30px;
+    font-size: 12px;
+  }
+  .card {
+    width: 170px;
+    height: 240px;
+    margin: 10px;
+  }
+  .media-icons ul {
+    display: flex;
+    list-style: none;
+  }
+  .media-icons a {
+    color: white;
+    font-size: 25px;
+    margin: 30px;
+  }
+}
+@media screen and (max-width: 418px) {
+  header .container .myName {
+    font-size: 20px;
+    margin-left: 15px;
+    text-align: center;
+  }
+  header .container .myName .min-myName {
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  header .container .logo-Animation {
+    width: 40px;
+    height: 40px;
+    /* background-color: red; */
+    position: relative;
+  }
+  .meImg {
     width: 120px;
     height: 120px;
+    border-radius: 40%;
+    margin: 10px;
+  }
+  .abotMe {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.064);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 30px;
+    width: 190px;
+    height: 120px;
+    margin-left: 10px;
+    letter-spacing: 3px;
+  }
+  .abotMe .jobName {
+    margin: 17px 0 0 30px;
+    font-size: 17px;
+    font-weight: bold;
+  }
+  .abotMe h3 {
+    margin: 10px 0 0 60px;
+    font-size: 16px;
+  }
+  .abotMe .romaji {
+    margin: 0 0 0 30px;
+  }
+  .abotMe .certification {
+    margin: 7px 0 0 40px;
+    font-size: 12px;
+  }
+  .card {
+    width: 170px;
+    height: 240px;
+    margin: 10px;
+  }
+  .media-icons ul {
+    display: flex;
+    list-style: none;
+  }
+  .media-icons a {
+    color: white;
+    font-size: 25px;
+    margin: 30px;
   }
 }/*# sourceMappingURL=style.css.map */

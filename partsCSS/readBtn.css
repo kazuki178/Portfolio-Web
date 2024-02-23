@@ -1,0 +1,15 @@
+.read{
+    background-color: black;
+    text-decoration: none;
+    padding: 15px 20px 15px 20px;
+    border-radius: 20px;
+    border: solid 2px #09d532;
+    color: white;
+    transition: .3s;
+
+}
+.read:hover{
+    border: solid 2px black;
+    color: #09d532;
+    transition: .3s;
+}
