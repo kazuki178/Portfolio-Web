@@ -343,6 +343,13 @@ header .container .logo-Animation span:nth-child(4) {
     /* background-color: red; */
     position: relative;
   }
+  header .container .logo-Animation span {
+    position: absolute;
+    border: 1px solid #09d532;
+    width: 100%;
+    height: 100%;
+    animation: animate 5s linear infinite;
+  }
   .meImg {
     width: 180px;
     height: 180px;
