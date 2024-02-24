@@ -203,19 +203,11 @@ header {
 
 
 
-// about-meボタン
-.aboutMeBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 90px;
-}
-
 
 
 // セクション2
 .section-02 {
-    margin-top: 160px;
+    margin-top: 120px;
     // background-color: red;
 }
 
@@ -404,13 +396,13 @@ header {
         letter-spacing: 3px;
 
         .jobName {
-            margin: 20px 0 0 30px;
+            margin: 15px 0 0 30px;
             font-size: 24px;
             font-weight: bold;
         }
 
         h3 {
-            margin: 20px 0 0 90px;
+            margin: 14px 0 0 90px;
         }
 
         .romaji {
@@ -480,11 +472,13 @@ header {
             margin: 0 0 0 70px;
         }
 
+        // ショウサイド
         .certification {
-            margin: 15px 0 0 30px;
+            margin: 12px 0 0 30px ;
             font-size: 15px;
         }
     }
+    
 
 
     .card {
@@ -552,8 +546,10 @@ header {
             margin: 0 0 0 30px;
         }
 
+
+        // なぜか詳細度低い
         .certification {
-            margin: 15px 0 0 30px;
+            margin: 10px 0 0 30px !important;
             font-size: 12px;
         }
     }

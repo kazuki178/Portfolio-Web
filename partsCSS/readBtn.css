@@ -1,3 +1,31 @@
+
+
+/* btnの親 */
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* aboutMeのボタン */
+.aboutMe{
+    background-color: black;
+    text-decoration: none;
+    padding: 15px 20px 15px 20px;
+    border-radius: 20px;
+    border: solid 2px #09d532;
+    color: white;
+    transition: .3s;
+    margin-top: 40px;
+
+}
+.aboutMe:hover{
+    border: solid 2px black;
+    color: #09d532;
+    transition: .3s;
+}
+
+/* 読むボタン */
 .read{
     background-color: black;
     text-decoration: none;
@@ -6,9 +34,29 @@
     border: solid 2px #09d532;
     color: white;
     transition: .3s;
-
+    margin-top: 40px;
 }
 .read:hover{
+    border: solid 2px black;
+    color: #09d532;
+    transition: .3s;
+}
+
+/* 戻るボタン */
+
+.returnBtn{
+    background-color: black;
+    text-decoration: none;
+    padding: 15px 20px 15px 20px;
+    border-radius: 20px;
+    border: solid 2px #09d532;
+    color: white;
+    transition: .3s;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+.returnBtn:hover{
     border: solid 2px black;
     color: #09d532;
     transition: .3s;

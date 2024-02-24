@@ -161,15 +161,8 @@ header .container .logo-Animation span:nth-child(4) {
   font-size: 15px;
 }
 
-.aboutMeBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 90px;
-}
-
 .section-02 {
-  margin-top: 160px;
+  margin-top: 120px;
 }
 
 .container {
@@ -319,12 +312,12 @@ header .container .logo-Animation span:nth-child(4) {
     letter-spacing: 3px;
   }
   .abotMe .jobName {
-    margin: 20px 0 0 30px;
+    margin: 15px 0 0 30px;
     font-size: 24px;
     font-weight: bold;
   }
   .abotMe h3 {
-    margin: 20px 0 0 90px;
+    margin: 14px 0 0 90px;
   }
   .abotMe .romaji {
     margin: 0 0 0 70px;
@@ -378,7 +371,7 @@ header .container .logo-Animation span:nth-child(4) {
     margin: 0 0 0 70px;
   }
   .abotMe .certification {
-    margin: 15px 0 0 30px;
+    margin: 12px 0 0 30px;
     font-size: 15px;
   }
   .card {
@@ -432,7 +425,7 @@ header .container .logo-Animation span:nth-child(4) {
     margin: 0 0 0 30px;
   }
   .abotMe .certification {
-    margin: 15px 0 0 30px;
+    margin: 10px 0 0 30px !important;
     font-size: 12px;
   }
   .card {
