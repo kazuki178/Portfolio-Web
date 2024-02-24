@@ -8,8 +8,10 @@
 body {
     height: 100vh;
     width: 100%;
-    background-color: #000000;
+
     background: linear-gradient(#000000, rgb(2 9 1));
+    background-color: #031900;
+    
     // display flex はblockにonload時に変更させる
     display: flex;
     align-items: center;
