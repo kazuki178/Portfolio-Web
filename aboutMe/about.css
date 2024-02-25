@@ -25,7 +25,7 @@ body {
 }
 .loader span {
   position: absolute;
-  border: 2px solid #09d532;
+  border: 1.5px solid #09d532;
   width: 100%;
   height: 100%;
   animation: animate 5s linear infinite;
@@ -96,7 +96,7 @@ header .container .logo-Animation {
 }
 header .container .logo-Animation span {
   position: absolute;
-  border: 2px solid #09d532;
+  border: 1.5px solid #09d532;
   width: 100%;
   height: 100%;
   animation: animate 5s linear infinite;
@@ -135,29 +135,31 @@ header .container .logo-Animation span:nth-child(4) {
 }
 
 .abotMe {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.064);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   border-radius: 30px;
   width: 320px;
   height: 190px;
-  margin-left: 30px;
   letter-spacing: 3px;
 }
 .abotMe .jobName {
-  margin: 20px 0 0 30px;
+  margin: 0px 0 0 -60px;
   font-size: 24px;
   font-weight: bold;
 }
 .abotMe h3 {
-  margin: 20px 0 0 90px;
+  margin: 20px 0 0 30px;
 }
 .abotMe .romaji {
-  margin: 0 0 0 70px;
+  margin: 0 0 0 30px;
 }
 .abotMe .certification {
-  margin: 20px 0 0 30px;
+  margin: 20px 0 0 -60px;
   font-size: 15px;
 }
 
@@ -277,7 +279,7 @@ header .container .logo-Animation span:nth-child(4) {
   }
   header .container .logo-Animation span {
     position: absolute;
-    border: 2px solid #09d532;
+    border: 1.5px solid #09d532;
     width: 100%;
     height: 100%;
     animation: animate 5s linear infinite;
@@ -313,7 +315,7 @@ header .container .logo-Animation span:nth-child(4) {
   }
   header .container .logo-Animation span {
     position: absolute;
-    border: 2px solid #09d532;
+    border: 1.2px solid #09d532;
     width: 100%;
     height: 100%;
     animation: animate 5s linear infinite;
@@ -339,30 +341,34 @@ header .container .logo-Animation span:nth-child(4) {
     margin: 30px;
   }
   .abotMe {
-    display: block;
-    background-color: rgba(255, 255, 255, 0.064);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
     border-radius: 30px;
-    width: 250px;
-    height: 160px;
-    margin-left: 30px;
+    width: 320px;
+    height: 190px;
     letter-spacing: 3px;
   }
   .abotMe .jobName {
-    margin: 20px 0 0 30px;
+    margin: 0px 0 0 -60px;
     font-size: 24px;
     font-weight: bold;
   }
   .abotMe h3 {
-    margin: 20px 0 0 90px;
+    margin: 20px 0 0 30px;
   }
   .abotMe .romaji {
-    margin: 0 0 0 70px;
+    margin: 0 0 0 30px;
   }
   .abotMe .certification {
-    margin: 15px 0 0 30px;
+    margin: 20px 0 0 -60px;
     font-size: 15px;
+  }
+  .card {
+    height: 450px;
   }
 }
 @media screen and (max-width: 590px) {
@@ -375,45 +381,46 @@ header .container .logo-Animation span:nth-child(4) {
     font-size: 13px;
   }
   header .container .logo-Animation {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     /* background-color: red; */
     position: relative;
   }
   .meImg {
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
     border-radius: 40%;
     margin: 10px;
   }
   .abotMe {
-    display: block;
-    background-color: rgba(255, 255, 255, 0.064);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
     border-radius: 30px;
-    width: 250px;
-    height: 160px;
-    margin-left: 10px;
+    width: 220px;
+    height: 150px;
     letter-spacing: 3px;
   }
   .abotMe .jobName {
-    margin: 20px 0 0 30px;
-    font-size: 24px;
+    margin: 10px 0 0 -60px;
+    font-size: 20px;
     font-weight: bold;
   }
   .abotMe h3 {
-    margin: 20px 0 0 90px;
+    margin: 15px 0 0 30px;
   }
   .abotMe .romaji {
-    margin: 0 0 0 70px;
+    margin: 0 0 0 30px;
   }
   .abotMe .certification {
-    margin: 15px 0 0 30px;
-    font-size: 15px;
+    margin: 10px 0 0 -60px;
+    font-size: 12px;
   }
   .card {
-    height: 500px;
+    height: 490px;
   }
 }
 @media screen and (max-width: 499px) {
@@ -427,16 +434,10 @@ header .container .logo-Animation span:nth-child(4) {
     font-size: 13px;
   }
   .card {
-    height: 650px;
+    height: 550px;
   }
 }
 @media screen and (max-width: 446px) {
-  .section-01 {
-    margin-top: 0;
-  }
-  .section-03 {
-    margin-top: 50px;
-  }
   header .container .myName {
     font-size: 20px;
     margin-left: 15px;
@@ -452,38 +453,41 @@ header .container .logo-Animation span:nth-child(4) {
     /* background-color: red; */
     position: relative;
   }
+  .abotMe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 30px;
+    width: 200px;
+    height: 130px;
+    letter-spacing: 3px;
+  }
+  .abotMe .jobName {
+    margin: 10px 0 0 -60px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .abotMe h3 {
+    margin: 15px 0 0 30px;
+  }
+  .abotMe .romaji {
+    margin: 0 0 0 30px;
+  }
+  .abotMe .certification {
+    margin: 10px 0 0 -60px;
+    font-size: 12px;
+  }
   .meImg {
     width: 140px;
     height: 140px;
     border-radius: 40%;
     margin: 10px;
   }
-  .abotMe {
-    display: block;
-    background-color: rgba(255, 255, 255, 0.064);
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-    border-radius: 30px;
-    width: 210px;
-    height: 140px;
-    margin-left: 10px;
-    letter-spacing: 3px;
-  }
-  .abotMe .jobName {
-    margin: 20px 0 0 30px;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .abotMe h3 {
-    margin: 10px 0 0 60px;
-    font-size: 19px;
-  }
-  .abotMe .romaji {
-    margin: 0 0 0 30px;
-  }
-  .abotMe .certification {
-    margin: 11px 0 0 30px;
-    font-size: 12px;
+  .card {
+    height: 630px;
   }
   .media-icons ul {
     display: flex;
@@ -518,34 +522,7 @@ header .container .logo-Animation span:nth-child(4) {
     margin: 10px;
   }
   .card {
-    height: 750px;
-  }
-  .abotMe {
-    display: block;
-    background-color: rgba(255, 255, 255, 0.064);
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-    border-radius: 30px;
-    width: 190px;
-    height: 120px;
-    margin-left: 10px;
-    letter-spacing: 3px;
-  }
-  .abotMe .jobName {
-    margin: 17px 0 0 30px;
-    font-size: 17px;
-    font-weight: bold;
-  }
-  .abotMe h3 {
-    margin: 10px 0 0 60px;
-    font-size: 16px;
-  }
-  .abotMe .romaji {
-    margin: 0 0 0 30px;
-  }
-  .abotMe .certification {
-    margin: 7px 0 0 40px;
-    font-size: 12px;
+    height: 770px;
   }
   .media-icons ul {
     display: flex;

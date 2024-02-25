@@ -123,7 +123,7 @@ header {
 
             span {
                 position: absolute;
-                border: 2px solid #09d532;
+                border: 1.5px solid #09d532;
                 width: 100%;
                 height: 100%;
                 animation: animate 5s linear infinite;
@@ -173,32 +173,34 @@ header {
 }
 
 .abotMe {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     // background-color: red;
     background-color: rgba(255, 255, 255, 0.064);
     backdrop-filter: blur(20px);
     border-radius: 30px;
     width: 320px;
     height: 190px;
-    margin-left: 30px;
     letter-spacing: 3px;
 
     .jobName {
-        margin: 20px 0 0 30px;
+        margin: 0px 0 0 -60px;
         font-size: 24px;
         font-weight: bold;
     }
 
     h3 {
-        margin: 20px 0 0 90px;
+        margin: 20px 0 0 30px;
     }
 
     .romaji {
-        margin: 0 0 0 70px;
+        margin: 0 0 0 30px;
     }
 
     .certification {
-        margin: 20px 0 0 30px;
+        margin: 20px 0 0 -60px;
         font-size: 15px;
     }
 }
@@ -301,7 +303,7 @@ header {
 
                 span {
                     position: absolute;
-                    border: 2px solid #09d532;
+                    border: 1.5px solid #09d532;
                     width: 100%;
                     height: 100%;
                     animation: animate 5s linear infinite;
@@ -351,7 +353,7 @@ header {
 
                 span {
                     position: absolute;
-                    border: 2px solid #09d532;
+                    border: 1.2px solid #09d532;
                     width: 100%;
                     height: 100%;
                     animation: animate 5s linear infinite;
@@ -386,205 +388,45 @@ header {
     }
 
 
+
     .abotMe {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         // background-color: red;
-        background-color: rgba(255, 255, 255, 0.064);
+        // background-color: rgba(255, 255, 255, 0.064);
         backdrop-filter: blur(20px);
         border-radius: 30px;
-        width: 250px;
-        height: 160px;
-        margin-left: 30px;
+        width: 320px;
+        height: 190px;
         letter-spacing: 3px;
 
         .jobName {
-            margin: 15px 0 0 30px;
+            margin: 0px 0 0 -60px;
             font-size: 24px;
             font-weight: bold;
         }
 
         h3 {
-            margin: 14px 0 0 90px;
-        }
-
-        .romaji {
-            margin: 0 0 0 70px;
-        }
-
-        .certification {
-            margin: 15px 0 0 30px;
-            font-size: 15px;
-        }
-    }
-}
-
-
-@media screen and (max-width: 590px) {
-    header {
-        .container {
-            .myName {
-                font-size: 25px;
-                margin-left: 15px;
-
-                .min-myName {
-                    margin-left: 10px;
-                    font-size: 13px;
-                }
-            }
-
-            .logo-Animation {
-                width: 100px;
-                height: 100px;
-                /* background-color: red; */
-                position: relative;
-                span {
-                    position: absolute;
-                    border: 1px solid #09d532;
-                    width: 100%;
-                    height: 100%;
-                    animation: animate 5s linear infinite;
-    
-
-                }
-            }
-        }
-    }
-
-    .meImg {
-        width: 180px;
-        height: 180px;
-        border-radius: 40%;
-        margin: 10px;
-    }
-
-
-    .abotMe {
-        display: block;
-        // background-color: red;
-        background-color: rgba(255, 255, 255, 0.064);
-        backdrop-filter: blur(20px);
-        border-radius: 30px;
-        width: 250px;
-        height: 160px;
-        margin-left: 10px;
-        letter-spacing: 3px;
-
-        .jobName {
             margin: 20px 0 0 30px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        h3 {
-            margin: 20px 0 0 90px;
-        }
-
-        .romaji {
-            margin: 0 0 0 70px;
-        }
-
-        // ショウサイド
-        .certification {
-            margin: 12px 0 0 30px ;
-            font-size: 15px;
-        }
-    }
-    
-
-
-    .card {
-        width: 170px;
-        height: 240px;
-        margin: 10px;
-    }
-}
-
-
-
-@media screen and (max-width: 590px) {
-    header {
-        .container {
-            .myName {
-                font-size: 25px;
-                margin-left: 15px;
-
-                .min-myName {
-                    margin-left: 10px;
-                    font-size: 13px;
-                }
-            }
-
-            .logo-Animation {
-                width: 80px;
-                height: 80px;
-                /* background-color: red; */
-                position: relative;
-            }
-        }
-    }
-
-    .meImg {
-        width: 140px;
-        height: 140px;
-        border-radius: 40%;
-        margin: 10px;
-    }
-
-
-    .abotMe {
-        display: block;
-        // background-color: red;
-        background-color: rgba(255, 255, 255, 0.064);
-        backdrop-filter: blur(20px);
-        border-radius: 30px;
-        width: 210px;
-        height: 140px;
-        margin-left: 10px;
-        letter-spacing: 3px;
-
-        .jobName {
-            margin: 20px 0 0 30px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        h3 {
-            margin: 10px 0 0 60px;
-            font-size: 19px;
         }
 
         .romaji {
             margin: 0 0 0 30px;
         }
 
-
-        // なぜか詳細度低い
         .certification {
-            margin: 10px 0 0 30px !important;
-            font-size: 12px;
-        }
-    }
-
-
-    .card {
-        width: 170px;
-        height: 240px;
-        margin: 10px;
-    }
-
-    .media-icons {
-        ul {
-            display: flex;
-            list-style: none;
-        }
-
-        a {
-            color: white;
-            font-size: 25px;
-            margin: 30px;
+            margin: 20px 0 0 -60px;
+            font-size: 15px;
         }
     }
 }
+
+
+
+
+
 
 
 
@@ -619,25 +461,26 @@ header {
 
 
     .abotMe {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         // background-color: red;
-        background-color: rgba(255, 255, 255, 0.064);
+        // background-color: rgba(255, 255, 255, 0.064);
         backdrop-filter: blur(20px);
         border-radius: 30px;
-        width: 210px;
-        height: 140px;
-        margin-left: 10px;
+        width: 220px;
+        height: 150px;
         letter-spacing: 3px;
 
         .jobName {
-            margin: 20px 0 0 30px;
+            margin: 10px 0 0 -60px;
             font-size: 20px;
             font-weight: bold;
         }
 
         h3 {
-            margin: 10px 0 0 60px;
-            font-size: 19px;
+            margin: 15px 0 0 30px;
         }
 
         .romaji {
@@ -645,7 +488,7 @@ header {
         }
 
         .certification {
-            margin: 15px 0 0 30px;
+            margin: 10px 0 0 -60px;
             font-size: 12px;
         }
     }
@@ -655,19 +498,6 @@ header {
         width: 170px;
         height: 240px;
         margin: 10px;
-    }
-
-    .media-icons {
-        ul {
-            display: flex;
-            list-style: none;
-        }
-
-        a {
-            color: white;
-            font-size: 25px;
-            margin: 30px;
-        }
     }
 }
 
@@ -711,6 +541,40 @@ header {
         }
     }
 
+    
+    .abotMe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // background-color: red;
+        // background-color: rgba(255, 255, 255, 0.064);
+        backdrop-filter: blur(20px);
+        border-radius: 30px;
+        width: 200px;
+        height: 130px;
+        letter-spacing: 3px;
+
+        .jobName {
+            margin: 10px 0 0 -60px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        h3 {
+            margin: 15px 0 0 30px;
+        }
+
+        .romaji {
+            margin: 0 0 0 30px;
+        }
+
+        .certification {
+            margin: 10px 0 0 -60px;
+            font-size: 12px;
+        }
+    }
+
     .meImg {
         width: 140px;
         height: 140px;
@@ -719,37 +583,6 @@ header {
     }
 
 
-    .abotMe {
-        display: block;
-        // background-color: red;
-        background-color: rgba(255, 255, 255, 0.064);
-        backdrop-filter: blur(20px);
-        border-radius: 30px;
-        width: 210px;
-        height: 140px;
-        margin-left: 10px;
-        letter-spacing: 3px;
-
-        .jobName {
-            margin: 20px 0 0 30px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        h3 {
-            margin: 10px 0 0 60px;
-            font-size: 19px;
-        }
-
-        .romaji {
-            margin: 0 0 0 30px;
-        }
-
-        .certification {
-            margin: 15px 0 0 30px;
-            font-size: 12px;
-        }
-    }
 
 
     .card {
@@ -795,6 +628,8 @@ header {
         }
     }
 
+    
+
     .meImg {
         width: 120px;
         height: 120px;
@@ -803,37 +638,6 @@ header {
     }
 
 
-    .abotMe {
-        display: block;
-        // background-color: red;
-        background-color: rgba(255, 255, 255, 0.064);
-        backdrop-filter: blur(20px);
-        border-radius: 30px;
-        width: 190px;
-        height: 120px;
-        margin-left: 10px;
-        letter-spacing: 3px;
-
-        .jobName {
-            margin: 17px 0 0 30px;
-            font-size: 17px;
-            font-weight: bold;
-        }
-
-        h3 {
-            margin: 10px 0 0 60px;
-            font-size: 16px;
-        }
-
-        .romaji {
-            margin: 0 0 0 30px;
-        }
-
-        .certification {
-            margin: 7px 0 0 40px;
-            font-size: 12px;
-        }
-    }
 
 
     .card {
