@@ -46,7 +46,7 @@ body {
 }
 .loader h2 {
   color: white;
-  font-size: 26px;
+  font-size: 20px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: 700;
 }
@@ -79,14 +79,13 @@ header .container {
 header .container .myName {
   font-family: "Anta", sans-serif;
   margin-left: 75px;
-  font-size: 40px;
 }
 header .container .myName span {
   display: inline-block;
 }
 header .container .myName .min-myName {
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 14px;
 }
 header .container .logo-Animation {
   width: 170px;
@@ -264,12 +263,9 @@ header .container .logo-Animation span:nth-child(4) {
 }
 
 @media screen and (max-width: 900px) {
-  header .container .myName {
-    font-size: 30px;
-  }
   header .container .myName .min-myName {
     margin-left: 10px;
-    font-size: 15px;
+    font-size: 14px;
   }
   header .container .logo-Animation {
     width: 130px;
@@ -300,12 +296,9 @@ header .container .logo-Animation span:nth-child(4) {
   }
 }
 @media screen and (max-width: 692px) {
-  header .container .myName {
-    font-size: 25px;
-  }
   header .container .myName .min-myName {
     margin-left: 10px;
-    font-size: 13px;
+    font-size: 14px;
   }
   header .container .logo-Animation {
     width: 100px;
@@ -373,12 +366,11 @@ header .container .logo-Animation span:nth-child(4) {
 }
 @media screen and (max-width: 590px) {
   header .container .myName {
-    font-size: 25px;
     margin-left: 15px;
   }
   header .container .myName .min-myName {
     margin-left: 10px;
-    font-size: 13px;
+    font-size: 14px;
   }
   header .container .logo-Animation {
     width: 70px;
@@ -425,13 +417,12 @@ header .container .logo-Animation span:nth-child(4) {
 }
 @media screen and (max-width: 499px) {
   header .container .myName {
-    font-size: 20px;
     margin-left: 15px;
     text-align: center;
   }
   header .container .myName .min-myName {
     margin-left: 10px;
-    font-size: 13px;
+    font-size: 14px;
   }
   .card {
     height: 550px;
@@ -439,13 +430,12 @@ header .container .logo-Animation span:nth-child(4) {
 }
 @media screen and (max-width: 446px) {
   header .container .myName {
-    font-size: 20px;
     margin-left: 15px;
     text-align: center;
   }
   header .container .myName .min-myName {
     margin-left: 10px;
-    font-size: 13px;
+    font-size: 14px;
   }
   header .container .logo-Animation {
     width: 50px;
@@ -501,13 +491,12 @@ header .container .logo-Animation span:nth-child(4) {
 }
 @media screen and (max-width: 418px) {
   header .container .myName {
-    font-size: 20px;
     margin-left: 15px;
     text-align: center;
   }
   header .container .myName .min-myName {
     margin-left: 10px;
-    font-size: 13px;
+    font-size: 14px;
   }
   header .container .logo-Animation {
     width: 40px;
