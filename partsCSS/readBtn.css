@@ -20,7 +20,7 @@
 
 }
 .aboutMe:hover{
-    border: solid 2px black;
+    border: solid 2px ;
     color: #09d532;
     transition: .3s;
 }
@@ -37,7 +37,7 @@
     margin-top: 40px;
 }
 .read:hover{
-    border: solid 2px black;
+    border: solid 2px ;
     color: #09d532;
     transition: .3s;
 }
@@ -57,7 +57,7 @@
 }
 
 .returnBtn:hover{
-    border: solid 2px black;
+    border: solid 2px;
     color: #09d532;
     transition: .3s;
 }
